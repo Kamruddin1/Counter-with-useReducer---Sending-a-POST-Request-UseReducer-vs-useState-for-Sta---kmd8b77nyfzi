@@ -3,7 +3,7 @@ import { counterReducer } from '../reducers/counterReducer';
 import '../styles/App.css';
 
 const initialState = {
-  count:0
+  counter:0
 }
 const App = () => {
 const [state,dispatch] = useReducer(counterReducer,initialState)
@@ -19,7 +19,7 @@ const hnadleDecre = () =>{
 
   return (
     <div id="main">
-       <p>{state.count}</p>
+       <span id='counter'>{state.counter}</span>
       <button id='increment-btn' onClick={handleIncre}>Increment</button>
       <button id='decrement-btn' onClick={hnadleDecre}>Decrement</button>
 
